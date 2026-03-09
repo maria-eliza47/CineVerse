@@ -1,0 +1,96 @@
+nav {
+    --latime-buton: 100px;
+    --inaltime-buton: 30px;
+    background-color: var(--culoare-contur);
+}
+
+ul.meniu,
+ul.meniu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hamburger,
+#ch-menu {
+    display: none;
+}
+
+.text-icon,
+.imag-icon {
+    display: inline-block;
+}
+
+ul.meniu {
+    display: flex;
+    position: relative;
+}
+
+
+ul.meniu ul {
+    display: none;
+    position: absolute;
+    z-index: 17;
+
+}
+
+ul.meniu li:hover ul {
+    display: block;
+    animation: animatie_submeniu 1s linear;
+    transform-origin: center top;
+
+}
+
+@keyframes animatie_submeniu {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.5, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+ul.meniu li {
+    width: var(--latime-buton);
+    height: var(--inaltime-buton);
+    background-color: var(--culoare-fundal);
+    border: 1px solid var(--culoare-contur);
+    color: black;
+    text-align: center;
+    line-height: var(--inaltime-buton);
+    /* text-decoration: none; */
+    /* margin-right: 10px; */
+    transition: all 0.33s linear;
+    font-weight: bold;
+}
+
+ul.meniu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.33s linear;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+ul.meniu>li:hover,
+ul.meniu li:hover .text-icon {
+    background-color: var(--culoare-contur);
+    color: rgb(22, 14, 96);
+}
+
+ul.meniu>li a:hover {
+    background-color: var(--culoare-contur);
+    color: rgb(22, 14, 96);
+    transition: all 0.33s linear;
+}

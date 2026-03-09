@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <title>CineVerse</title>
+    <meta name="author" content="Pirvulescu Eliza-Maria">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pe acest site veți găsi un ghid online de filme și seriale care oferă recomandări și recenzii pentru a te ajuta să alegi rapid ce merită urmărit.">
+    <meta name="keywords"
+        content="ghid filme, ghid seriale, recomandări, recenzii, streaming, genuri, actori, regizori, filme, seriale, cinematografie, recenzii, TV shows, movies, series, actors, directors">
+    <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./resurse/css/general.css" type="text/css">
+    <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <label id="hamburger" for="ch-menu">
+            <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input type="checkbox" id="ch-menu" />
+
+
+        <ul class="meniu">
+
+            <li>Acasa
+                <ul>
+                    <li><a href="#welcome">Welcome</a></li>
+                    <li><a href="#noutati">Noutati</a></li>
+                    <li><a href="#categorii">Categorii</a></li>
+                    <li><a href="#program">Recomandări pe zile</a></li>
+                    <li><a href="#evenimente">Evenimente</a></li>
+                    <li><a href="#index-intrebari">Întrebări frecvente</a></li>
+                    <li><a href="#trailere">Trailere</a></li>
+                </ul>
+            </li>
+            <li>Despre
+                <ul>
+                    <li><a href="#despre">Prezentare</a></li>
+                    <li><a href="#misiune">Misiune</a></li>
+                    <li><a href="#galerie-statica">Galerie</a></li>
+                </ul>
+            </li>
+            <li>Genuri
+                <ul>
+                    <li><a href="#filme">Filme</a></li>
+                    <li><a href="#seriale">Seriale</a></li>
+                    <li><a href="#documentare">Documentare</a></li>
+                </ul>
+            </li>
+            <li><a href="#subsol">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="c1" id="titlu">
+        <h1 id="t" class="audiowide-regular">CineVerse</h1>
+        <img src="./Resurse/Imagini/sigla.png" alt="sigla" id="logo">
+    </header>
+    <main> <!--  comentariu -->
+        <div id="grid-pagina">
+
+            <section id="welcome">
+                <hgroup>
+                    <h2>Bine ati venit</h2>
+                    <p class="subtitlu">Prezentarea siteului</p>
+                </hgroup>
+
+                <p class="intro">Pe acest site vei găsi recomandări personalizate de filme și seriale, în funcție de
+                    genurile preferate, producțiile care ți-au plăcut deja sau actorii tăi favoriți. CineVerse te ajută
+                    să descoperi rapid titluri noi, potrivite gusturilor tale, fără să pierzi timp căutând printre sute
+                    de opțiuni.</p>
+
+                <div class="intro-oferte">
+                    <div>Comedies</div>
+                    <div>Horror</div>
+                    <div>Romance</div>
+                    <div>Drama</div>
+                    <div>Thriller</div>
+                    <div>Animated</div>
+                    <div>Psychological</div>
+                    <div>Action</div>
+                </div>
+                <p class="anunt intro">Indiferent unde te afli, CineVerse îți oferă recomandări adaptate preferințelor
+                    tale, astfel încât să descoperi mereu următorul film sau serial care te va captiva.</p>
+                <div id="dv-prezentare-1">
+                    <div id="dv-prezentare">
+                        <picture>
+                            <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                            <source srcset="./Resurse/Imagini/colaj-small.jpg" media="(max-width:700px)" />
+                            <source srcset="./Resurse/Imagini/colaj-large.jpg" media="(max-width:1200px)" />
+                            <img src="./Resurse/Imagini/colaj.jpg" alt="Colaj-filme" />
+                        </picture>
+                    </div>
+                </div>
+                <hr class="prajituri" />
+                <div id="container-video">
+                    <img style="width:50%" class="popcorn" src="Resurse/Imagini/popcorn.png" alt="popcorn"
+                        title="Popcorn and movies">
+                    <div id="centrare-video">
+                        <div id="clip-video">
+                            <div id="stil-video">
+                                <video width="320" height="240" playsinline autoplay loop muted>
+                                    <source src="resurse/video/Chocolate.mp4" type="video/mp4">
+                                    <source src="resurse/video/Chocolate.ogv" type="video/ogv">
+                                    <track default
+                                        src="data:image/png;base64, V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo="
+                                        kind="captions" srclang="ro" label="romana">
+                                    <track
+                                        src="data:image/png;base64, V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo="
+                                        kind="captions" srclang="en" label="engleza">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="despre">
+                <h2>Despre CineVerse</h2>
+                <p><b>CineVerse</b> este un <b>ghid online de filme și seriale</b> dedicat pasionaților de
+                    cinematografie care își doresc
+                    recomandări relevante și actualizate constant. Aici găsești <b>recomandări personalizate</b> în
+                    funcție de genuri,
+                    actori preferați, producții similare sau tendințe din streaming. Fie că ești în căutarea unui <i
+                        lang="en">must-watch</i>
+                    intens, a unui serial pentru binge-watching sau a unui documentar inspirațional, platforma îți oferă
+                    selecții clare,
+                    topuri tematice și informații esențiale pentru a alege rapid ce merită urmărit.</p>
+            </section>
+
+            <section id="misiune">
+                <h2>Misiune</h2>
+                <p> Misiunea CineVerse este de a transforma alegerea unui film sau a unui serial într-o experiență
+                    simplă și plăcută.
+                    Ne propunem să oferim conținut clar, bine structurat și actualizat, care să reducă timpul pierdut
+                    căutând printre
+                    sute de titluri disponibile pe platformele de streaming. Prin selecții atent organizate, topuri
+                    tematice și analize
+                    scurte, ne dorim să construim un spațiu de încredere pentru pasionații de cinematografie.</p>
+            </section>
+            <section id="noutati">
+
+                <p>
+                    Pentru informații suplimentare despre filme, poți consulta
+                    <a href="https://www.imdb.com/" target="_blank" rel="noopener noreferrer">IMDb</a>.
+                </p>
+                <p>
+                    Există și site-uri care realizează clasamente cu platforme de streaming gratuite.
+                    Un exemplu este
+                    <a href="https://www.bestfreestreaming.org/" target="_blank" rel="noopener noreferrer">
+                        Best Free Streaming
+                    </a>.
+                </p>
+
+                <h2><i lang="en">Must-Watch</i></h2>
+
+                <article>
+                    <h3>Film recomandat: <i lang="en">Sinners</i></h3>
+                    <p><b>Sinners</b>, cu <b>Michael B. Jordan</b> în rol principal, este un thriller dramatic cu
+                        tensiune psihologică și alegeri morale grele.</p>
+                    <p>Notă pe <abbr title="Internet Movie Database">IMDb</abbr>: <b>7.5/10</b>.</p>
+                    <p>
+                        Popularitate în rândul utilizatorilor:
+                        <meter min="0" max="10" low="4" high="8" optimum="9" value="7.5"></meter>
+                    </p>
+                    <p>Dacă îți plac producțiile intense și personajele complexe, acesta e un <i
+                            lang="en">must-watch</i>.</p>
+                </article>
+
+                <article>
+                    <h3>Serial recomandat: <i lang="en">Snowfall</i></h3>
+                    <p><b>Snowfall</b> urmărește ascensiunea lui Franklin Saint în Los Angelesul anilor ’80, pe fundalul
+                        exploziei epidemiei de crack.</p>
+                    <p>Notă pe <abbr title="Internet Movie Database">IMDb</abbr>: <b>8.5/10</b>.</p>
+                    <p>
+                        Nivelul de popularitate în acest moment:
+                        <meter min="0" max="10" low="4" high="8" optimum="9" value="8.5"></meter>
+                    </p>
+                    <p>Recomandat dacă îți plac dramele realiste, cu ritm alert și tensiune constantă.</p>
+                    <p>
+                        Mai multe informații despre distribuția serialului Snowfall pot fi găsite aici:
+                        <a href="https://en.wikipedia.org/wiki/Snowfall_(TV_series)#Cast">
+                            https://en.<wbr>wikipedia.<wbr>org/wiki/<wbr>Snowfall_<wbr>(TV_series)#Cast
+                        </a>
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Selecție pe gustul tău</h3>
+                    <ol>
+                        <li>Filme în funcție de genul preferat</li>
+                        <li>Seriale similare cu cele deja vizionate</li>
+                        <li>Recomandări după actorii favoriți</li>
+                        <li><i lang="en">Must-watch</i> ale momentului</li>
+                        <li>Topuri actualizate săptămânal</li>
+                    </ol>
+                </article>
+            </section>
+            <section id="categorii">
+                <h2>Recomandări pe categorii</h2>
+                <p>Alege categoria preferată și găsește următoarea poveste care te va captiva.</p>
+                <section id="filme">
+                    <h3>Filme</h3>
+                    <p>Alege un film în funcție de starea ta: comedie, thriller, dramă sau acțiune. În fiecare listă
+                        găsești titluri similare cu ce ai mai urmărit.</p>
+                    <p>Avem recomandari pentru orice categorie</p>
+                    <ul>
+                        <li>Acțiune</li>
+                        <li>Aventură</li>
+                        <li>Comedie</li>
+                        <li>Dramă</li>
+                        <li>Thriller</li>
+                        <li>Horror</li>
+                        <li>Mister</li>
+                        <li>Crimă</li>
+                        <li>Romantic</li>
+                        <li>Sci-Fi</li>
+                        <li>Fantasy</li>
+                        <li>Animație</li>
+                        <li>Familie</li>
+                        <li>Război</li>
+                        <li>Western</li>
+                        <li>Musical</li>
+                        <li>Psihologic</li>
+                        <li>Teen</li>
+                        <li>Adaptări după cărți</li>
+                        <li>Remake-uri</li>
+                        <li>Sequel-uri</li>
+                        <li>Prequel-uri</li>
+                        <li>Filme premiate</li>
+                        <li>Filme de festival</li>
+                        <li>Clasice</li>
+                        <li>Filme europene</li>
+                        <li>Filme asiatice</li>
+                        <li>Filme românești</li>
+                    </ul>
+                </section>
+                <section id="seriale">
+                    <h3>Seriale</h3>
+                    <p>Descoperă seriale pentru binge-watching, thrillere intense sau producții premiate.</p>
+                    <p>Categorii populare:</p>
+                    <ul>
+                        <li>Crime & Mystery</li>
+                        <li>Drama</li>
+                        <li>Sci-Fi</li>
+                        <li>Fantasy</li>
+                        <li>Teen</li>
+                        <li>Comedy</li>
+                        <li>Mini-serii</li>
+                        <li>Thriller psihologic</li>
+                        <li>Istoric</li>
+                        <li>Political drama</li>
+                    </ul>
+                </section>
+
+                <section id="documentare">
+                    <h3>Documentare</h3>
+                    <p>Descoperă documentare captivante care abordează subiecte reale și povești impresionante.</p>
+                    <ul>
+                        <li>True Crime</li>
+                        <li>Istorie</li>
+                        <li>Știință și tehnologie</li>
+                        <li>Biografii</li>
+                        <li>Natură și mediu</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="program">
+                <h2>Recomandări pe zile</h2>
+
+                <table id="tab-program">
+                    <caption>Structura săptămânală a recomandărilor CineVerse</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Temă principală</th>
+                            <th>Exemple</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td rowspan="5" class="roz">Zile lucrătoare</td>
+                            <td>Luni</td>
+                            <td>Top filme pe genuri</td>
+                            <td>Acțiune, Dramă, Thriller</td>
+                        </tr>
+                        <tr>
+                            <td>Marți</td>
+                            <td>Seriale în trend</td>
+                            <td>Crime, Mini-serii</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>Recomandări după actori</td>
+                            <td>Michael B. Jordan, distribuții similare</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>Documentare</td>
+                            <td>True Crime, Istorie</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>Must-Watch ale săptămânii</td>
+                            <td>Lansări noi & producții premiate</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" class="roz">Weekend</td>
+                            <td>Sâmbătă</td>
+                            <td>Maraton cu prietenii</td>
+                            <td>Seriale pentru binge-watching</td>
+                        </tr>
+                        <tr>
+                            <td>Duminică</td>
+                            <td>Clasice & filme premiate</td>
+                            <td>Oscar picks, filme de festival</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                Programul este actualizat în funcție de lansările recente și tendințele din streaming.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <section id="evenimente">
+                <h2>Evenimente</h2>
+
+                <ul>
+                    <li>
+                        <time datetime="2026-06-15T20:00">15 iunie 2026, ora 20:00</time> —
+                        <b>Movie Night</b>
+                    </li>
+
+                    <li>
+                        <time datetime="2026-06-18T19:30">18 iunie 2026, ora 19:30</time> —
+                        <b>Serial Marathon</b>
+                    </li>
+
+                    <li>
+                        <time datetime="2026-06-22T18:00">22 iunie 2026, ora 18:00</time> —
+                        <b>Documentary Evening</b>
+                    </li>
+
+                    <li>
+                        <time datetime="2026-06-25T21:00">25 iunie 2026, ora 21:00</time> —
+                        <b>Classic Cinema Night</b>
+                    </li>
+                </ul>
+            </section>
+            <figure id="fig1" class="fg-img">
+                <img src="Resurse/Imagini/sinners2.jpg" alt="sinners">
+                <figcaption>Sinners</figcaption>
+            </figure>
+            <figure id="fig2" class="fg-img">
+                <img src="Resurse/Imagini/snowfall.jpg" alt="snowfall">
+                <figcaption>Snowfall</figcaption>
+            </figure>
+            <figure id="fig3" class="fg-img">
+                <img src="Resurse/Imagini/gacy_doc.jpg" alt="gacy">
+                <figcaption>Limited Series – Conversations With a Killer: The John Wayne Gacy Tapes</figcaption>
+            </figure>
+            <section id="anunturi">
+                <h2 class="fg-img">Anunțuri</h2>
+                <p><time datetime="2025-07-20">20 iulie 2025</time> Nu avem nimic de anuntat, doar a trecut ceva
+                    vreme de
+                    la ultimul anunț și ne-am gândit să mai scriem ceva pe aici.</p>
+                <p><time datetime="2022-01-05">5 ianuarie 2022</time> <strong>No more Covid!!!!</strong></p>
+
+                <p><time datetime="2020-03-15">15 martie 2020</time> <span>Am adăugat un nou update</span>
+                </p>
+                <p><time datetime="2020-04-05">5 aprilie 2020</time> <span>Am adăugat un nou update</span>
+                </p>
+                <p><time datetime="2020-07-05">5 iulie 2020</time> Am adăugat un nou update</p>
+                <p><time datetime="2020-09-15">15 septembrie 2020</time> Am adăugat mai multe genuri de filme.</p>
+                <p><time datetime="2020-12-20">20 decembrie 2020</time> Nu avem nimic de anunțat, dar ne era dor de
+                    voi.
+                </p>
+                <p><time datetime="2020-12-28">28 decembrie 2020</time> Am adăugat o secțiune pentru documentare</p>
+                <p><time datetime="2021-01-01">1 ianuarie 2021</time> Un an nou fericit!</p>
+            </section>
+            <section id="index-intrebari">
+                <h2>Întrebări frecvente</h2>
+                <details>
+                    <summary>Cum sunt alese recomandările?</summary>
+                    <p>Recomandările sunt organizate pe genuri, tendințe actuale, popularitate și preferințe tematice.
+                    </p>
+                </details>
+                <details>
+                    <summary>Pot găsi recomandări în funcție de actorii preferați?
+                    </summary>
+                    <p>Da!</p>
+                </details>
+                <details>
+                    <summary>Includeți și documentare?</summary>
+                    <p>Desigur. Avem o secțiune specială pentru documentare: true crime, istorie, știință și biografii.
+                    </p>
+                </details>
+                <details>
+                    <summary>Unde pot viziona producțiile recomandate?</summary>
+                    <p>Site-ul oferă sugestii și informații. Platformele de streaming pot varia în funcție de
+                        disponibilitate.</p>
+                </details>
+            </section>
+
+        </div>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <div id="grid-galerie">
+                <figure>
+                    <div>
+                        <a href="Resurse/Imagini/bojack.jpg">
+                            <img src="Resurse/Imagini/bojack.jpg" alt="bojack">
+                        </a>
+                    </div>
+                    <figcaption>BoJack Horseman</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/greys.jpg" alt="greys">
+                    <figcaption>Grey's Anatomy</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/lambs.jpg" alt="lambs">
+                    <figcaption>The Silence of the Lambs</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/homeland.jpg" alt="homeland">
+                    <figcaption>Homeland</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/shutterisland.jpg" alt="shutterisland">
+                    <figcaption>Shutter Island</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/coco.jpeg" alt="coco">
+                    <figcaption>Coco</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/chicks.jpg" alt="whitechicks">
+                    <figcaption>White Chicks</figcaption>
+                </figure>
+                <figure>
+                    <img src="Resurse/Imagini/wolf.png" alt="wolf">
+                    <figcaption>The Wolf of Wall Street</figcaption>
+                </figure>
+
+            </div>
+        </section>
+        <section id="trailere">
+            <h2>Trailere Must-Watch</h2>
+            <p>Descoperă mai jos trailerele producțiilor recomandate săptămâna aceasta.</p>
+
+            <div class="container-iframe">
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/bKGxHflevuk" target="ifr-video">
+                        Trailer Sinners
+                    </a>
+                    <a href="https://www.youtube.com/embed/hoJzibuefgU" target="ifr-video">
+                        Trailer Snowfall
+                    </a>
+                    <a href="https://www.youtube.com/embed/vIDbiQB6N28" target="ifr-video">
+                        Trailer Gacy-Documentary
+                    </a>
+                    <br />
+                </div>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bKGxHflevuk" name="ifr-video"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Descarcă resurse</h2>
+
+            <p>
+                <a href="Resurse/Imagini/sinners2.jpg" download="poster-sinners.jpg">
+                    Descarcă posterul filmului Sinners
+                </a>
+            </p>
+
+            <p>
+                <a href="Resurse/Imagini/bojack.jpg" download="bojack-poster.jpg">
+                    Descarcă posterul BoJack Horseman
+                </a>
+            </p>
+
+            <p>
+                <a href="Resurse/Imagini/greys.jpg" download="greys-anatomy-poster.jpg">
+                    Descarcă posterul Grey's Anatomy
+                </a>
+            </p>
+
+            <p>
+                <a href="Resurse/Imagini/shutterisland.jpg" download="shutter-island-poster.jpg">
+                    Descarcă posterul Shutter Island
+                </a>
+            </p>
+
+            <p>
+                <a href="Resurse/Imagini/wolf.png" download="wolf-of-wall-street-poster.png">
+                    Descarcă posterul The Wolf of Wall Street
+                </a>
+            </p>
+        </section>
+    </main>
+    <footer id="subsol">
+
+        <address>
+            Strada Filmelor nr. 10<br>
+            Etaj 2, Biroul 12<br>
+            București, România<br><br>
+            E-mail: <a href="mailto:pirvulescu.maria@gmail.com">Maria</a> <i class="fa-regular fa-envelope"></i>
+            Telefon: <a href="tel:+40755123456">tel</a>
+            Locație pe hartă:
+            <a href="https://www.google.com/maps/place/Facultatea+de+Matematica+si+Informatica,+Universitatea+din+Bucuresti/"
+                target="_blank">
+                Vezi locația pe Google Maps
+            </a><br>
+
+            Chat WhatsApp:
+            <a href="https://wa.me/40700123456" target="_blank">
+                Scrie-ne pe WhatsApp
+            </a>
+            1&lt;2&copy;
+        </address>
+        <a href="#titlu" title="mergi sus" id="link-top">Înapoi la începutul paginii</a>
+        <p><small>Copyright &copy;2026 Pirvulescu Eliza-Maria</small></p>
+    </footer>
+</body>
+
+</html>

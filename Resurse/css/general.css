@@ -1,0 +1,222 @@
+body {
+    --culoare-fundal: rgba(73, 105, 247, 0.553);
+    --culoare-contur: rgba(241, 237, 188, 0.426);
+    --margine-pagina: 120px;
+    background-color: var(--culoare-fundal);
+}
+
+main {
+    margin-left: var(--margine-pagina);
+    margin-right: var(--margine-pagina);
+}
+
+#grid-pagina {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1.2fr 2fr;
+    grid-template-areas: "welcome welcome welcome"
+        "despre  despre  despre"
+        "misiune noutati anunturi"
+        "categorii categorii categorii"
+        "evenimente evenimente evenimente"
+        "fig1 program  program"
+        "fig2 program  program"
+        "fig3 program  program"
+        "index-intrebari index-intrebari index-intrebari"
+        "galerie galerie galerie"
+        "trailere trailere trailere";
+}
+
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#logo {
+    height: 60px;
+    width: auto;
+}
+
+#grid-galerie img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#fig1 img,
+#fig2 img,
+#fig3 img {
+    padding: 10px;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+#tab-program {
+    border-collapse: separate;
+    border-spacing: 15px 3px;
+}
+
+#grid-pagina>* {
+    border: 1px solid var(--culoare-contur);
+    box-shadow: 0px 0px 5px var(--culoare-contur);
+    padding: 10px;
+}
+
+figure {
+    margin: 0;
+    /* resetare spatiere */
+}
+
+figure>img {
+    width: 100%;
+}
+
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#welcome {
+    grid-area: welcome;
+}
+
+#anunturi {
+    grid-area: anunturi;
+}
+
+
+#fig1 {
+    grid-area: fig1;
+}
+
+#fig2 {
+    grid-area: fig2;
+}
+
+#fig3 {
+    grid-area: fig3;
+}
+
+#despre {
+    grid-area: despre;
+}
+
+#misiune {
+    grid-area: misiune;
+}
+
+#noutati {
+    grid-area: noutati;
+}
+
+#categorii {
+    grid-area: categorii;
+}
+
+#program {
+    grid-area: program;
+}
+
+#evenimente {
+    grid-area: evenimente;
+}
+
+#galerie-statica {
+    grid-area: galerie;
+}
+
+#trailere {
+    grid-area: trailere;
+}
+
+#index-intrebari {
+    grid-area: index-intrebari;
+}
+
+.container-iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taburi-iframe {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.taburi-iframe>a {
+    display: inline-block;
+    padding: 10px;
+    background-color: antiquewhite;
+    border: 1px solid var(--culoare-contur);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*margin-right: 10px;*/
+    transition: all 0.33s linear;
+}
+
+.taburi-iframe>a:hover {
+    background-color: var(--culoare-contur);
+    color: white;
+}
+
+#tab-program td, #tab-program th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+#tab-program
+{
+    border-collapse: collapse;
+}
+
+#tab-program tr:nth-child(even)
+{
+    background-color: lightblue;
+}
+
+#tab-program .roz{
+    background-color: pink;
+}
+@media screen and (max-width:1200px) {
+
+    body {
+        --margine-pagina: 80px
+    }
+
+    #grid-pagina {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "welcome welcome"
+            "despre despre"
+            "misiune noutati"
+            "anunturi categorii"
+            "evenimente evenimente"
+            "fig1 program"
+            "fig2 program"
+            "fig3 program"
+            "index-intrebari index-intrebari"
+            "galerie galerie"
+            "trailere trailere";
+    }
+
+}
+
+@media screen and (max-width:700px) {
+
+    body {
+        --margine-pagina: 50px
+    }
+
+    #grid-pagina {
+        display: block;
+    }
+
+}
