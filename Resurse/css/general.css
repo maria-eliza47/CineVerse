@@ -137,6 +137,11 @@ figure>img {
     grid-area: index-intrebari;
 }
 
+#dv-prezentare img {
+    width: 40%;
+    display: block;
+}
+
 .container-iframe {
     display: flex;
     flex-direction: column;
@@ -167,25 +172,25 @@ figure>img {
     color: white;
 }
 
-#tab-program td, #tab-program th{
+#tab-program td,
+#tab-program th {
     border: 1px solid black;
     text-align: center;
     padding: 5px;
 }
 
-#tab-program
-{
+#tab-program {
     border-collapse: collapse;
 }
 
-#tab-program tr:nth-child(even)
-{
+#tab-program tr:nth-child(even) {
     background-color: lightblue;
 }
 
-#tab-program .roz{
+#tab-program .roz {
     background-color: pink;
 }
+
 @media screen and (max-width:1200px) {
 
     body {
