@@ -1,5 +1,5 @@
 # CineVerse
-just a little site for uni
+just a little site for uni :))))
 
 
 CineVerse este un website dedicat pasionaților de filme și seriale, realizat în HTML și CSS. Proiectul funcționează ca un ghid online care reunește recomandări, trailere, categorii variate și resurse vizuale, într-o interfață organizată și ușor de parcurs.
