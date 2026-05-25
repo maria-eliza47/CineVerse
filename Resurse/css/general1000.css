@@ -1,0 +1,23 @@
+html { font-size: 15px; }
+
+body {
+    --body-padding: 3rem;
+    --gap-grid: 1.25rem;
+}
+
+#grid-pagina {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "welcome          welcome"
+        "evenimente       anunturi"
+        "program          program"
+        "misiune          noutati"
+        "misiune          despre"
+        "categorii        categorii"
+        "index-intrebari  index-intrebari";
+}
+
+#grid-galerie { grid-template-columns: repeat(3, 1fr); }
+
+#figuri { flex-wrap: wrap; }
+#figuri figure { flex: 1 1 calc(33% - 1rem); min-width: 150px; }

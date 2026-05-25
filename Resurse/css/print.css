@@ -1,0 +1,125 @@
+@media print {
+
+    @page {
+        size: A4;
+    }
+
+    @page :left {
+        margin-left: 2.5cm;
+        margin-right: 0.5cm;
+    }
+
+    @page :right {
+        margin-left: 0.5cm;
+        margin-right: 2.5cm;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-30deg);
+        width: 100px;
+        height: 2cm;
+        border: double 4px #000;
+        opacity: 0.65;
+        font-size: 0.7rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    #banner {
+        display: block !important;
+        width: 80%;
+        margin: 0 auto 1cm auto;
+        text-align: center;
+        border: 2px dotted black;
+        padding: 0.5cm;
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    figure,
+    figcaption,
+    video,
+    iframe,
+    img,
+    picture,
+    .container-iframe,
+    #container-video,
+    #dv-prezentare-1,
+    #grid-galerie,
+    #figuri,
+    #link-top {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        display: block !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        page-break-after: always;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        text-decoration: underline;
+        color: black;
+    }
+
+    header h1 i {
+        display: none;
+    }
+
+    header #logo {
+        display: none;
+    }
+
+    footer {
+        page-break-before: always;
+        color: black;
+    }
+
+    footer #link-top {
+        display: none !important;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    #grid-pagina > section,
+    #galerie-statica,
+    #trailere,
+    #download,
+    #misiune,
+    #noutati,
+    #despre,
+    #categorii {
+        background-color: white !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+    }
+}

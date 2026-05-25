@@ -1,0 +1,8 @@
+ul.meniu > li {
+    width: 50px;
+}
+
+ul.meniu > li .text-nav,
+ul.meniu > li > a .text-nav {
+    display: none;
+}

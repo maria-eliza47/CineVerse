@@ -1,0 +1,24 @@
+html { font-size: 14px; }
+
+body {
+    --body-padding: 1rem;
+    --gap-grid: 0.75rem;
+}
+
+#grid-pagina { display: block; }
+#grid-pagina > section { margin-bottom: 0.75rem; }
+#grid-galerie { grid-template-columns: repeat(2, 1fr); }
+#figuri { flex-direction: column; }
+.taburi-iframe { flex-direction: column; }
+
+.taburi-iframe > a {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--culoare-contur);
+    margin-bottom: 0.3rem;
+}
+
+article figure img, #documentare figure img {
+    max-width: 180px;
+    max-height: 260px;
+}

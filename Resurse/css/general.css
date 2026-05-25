@@ -1,78 +1,39 @@
+@import "nav.css";
+
+html {
+    font-size: 16px;
+}
+
 body {
-    --culoare-fundal: rgba(73, 105, 247, 0.553);
-    --culoare-contur: rgba(241, 237, 188, 0.426);
-    --margine-pagina: 120px;
+    --culoare-fundal: #0d1b2a;
+    --culoare-primara: #1565c0;
+    --culoare-secundara: #1e3a5f;
+    --culoare-accent: #e8a020;
+    --culoare-text: #e3f2fd;
+    --culoare-contur: #1e88e5;
+    --culoare-nav: #0a1628;
+    --culoare-hover: rgba(30, 136, 229, 0.18);
+    --body-padding: 5rem;
+    --padding-intern: 1rem;
+    --gap-grid: 2rem;
     background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-width: 330px;
 }
 
-main {
-    margin-left: var(--margine-pagina);
-    margin-right: var(--margine-pagina);
-}
+* { box-sizing: border-box; }
 
-#grid-pagina {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1.2fr 2fr;
-    grid-template-areas: "welcome welcome welcome"
-        "despre  despre  despre"
-        "misiune noutati anunturi"
-        "categorii categorii categorii"
-        "evenimente evenimente evenimente"
-        "fig1 program  program"
-        "fig2 program  program"
-        "fig3 program  program"
-        "index-intrebari index-intrebari index-intrebari"
-        "galerie galerie galerie"
-        "trailere trailere trailere";
-}
+#banner { display: none; }
+#watermark { display: none; }
 
-#grid-galerie {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-#logo {
-    height: 60px;
-    width: auto;
-}
-
-#grid-galerie img {
-    width: 100%;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-#fig1 img,
-#fig2 img,
-#fig3 img {
-    padding: 10px;
-    width: 100%;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-}
-
-#tab-program {
-    border-collapse: separate;
-    border-spacing: 15px 3px;
-}
-
-#grid-pagina>* {
-    border: 1px solid var(--culoare-contur);
-    box-shadow: 0px 0px 5px var(--culoare-contur);
-    padding: 10px;
-}
-
-figure {
-    margin: 0;
-    /* resetare spatiere */
-}
-
-figure>img {
-    width: 100%;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+p, li, td, th, dd, dt { font-size: 1rem; }
+small { font-size: 0.85rem; }
+caption { font-size: 0.9rem; }
 
 .audiowide-regular {
     font-family: "Audiowide", sans-serif;
@@ -80,148 +41,294 @@ figure>img {
     font-style: normal;
 }
 
-#welcome {
-    grid-area: welcome;
+a { color: var(--culoare-accent); transition: color 0.3s; }
+a:hover { color: var(--culoare-contur); }
+figure { margin: 0; padding: 0; }
+figcaption { text-align: center; font-size: 0.9rem; margin-top: 0.3rem; }
+
+blockquote {
+    border-left: 4px solid var(--culoare-accent);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--culoare-accent);
 }
 
-#anunturi {
-    grid-area: anunturi;
+header {
+    background-color: var(--culoare-nav);
+    border-bottom: 2px solid var(--culoare-primara);
+    padding: var(--padding-intern) var(--body-padding);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
 
+#logo { height: 60px; width: auto; }
 
-#fig1 {
-    grid-area: fig1;
+footer {
+    background-color: var(--culoare-nav);
+    border-top: 2px solid var(--culoare-primara);
+    padding: var(--padding-intern) var(--body-padding);
+    margin-top: 2rem;
+    position: relative;
 }
 
-#fig2 {
-    grid-area: fig2;
+main {
+    background: rgba(255,255,255,0.03);
+    padding: 1.5rem var(--body-padding) 2rem;
 }
 
-#fig3 {
-    grid-area: fig3;
+#grid-pagina {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas:
+        "welcome      welcome      welcome"
+        "evenimente   program      anunturi"
+        "misiune      noutati      despre"
+        "misiune      categorii    categorii"
+        "index-intrebari index-intrebari index-intrebari";
+    grid-gap: var(--gap-grid);
+    padding: var(--padding-intern);
 }
 
-#despre {
-    grid-area: despre;
+#welcome            { grid-area: welcome; }
+#evenimente         { grid-area: evenimente; }
+#program            { grid-area: program; }
+#anunturi           { grid-area: anunturi; }
+#misiune            { grid-area: misiune; }
+#noutati            { grid-area: noutati; }
+#despre             { grid-area: despre; }
+#categorii          { grid-area: categorii; }
+#index-intrebari    { grid-area: index-intrebari; }
+
+#grid-pagina > section {
+    background-color: var(--culoare-secundara);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    padding: var(--padding-intern);
 }
 
-#misiune {
-    grid-area: misiune;
+#figuri {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem var(--padding-intern);
 }
 
-#noutati {
-    grid-area: noutati;
+#figuri figure {
+    flex: 1;
+    background-color: var(--culoare-secundara);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 8px;
+    padding: 0.5rem;
+    overflow: hidden;
 }
 
-#categorii {
-    grid-area: categorii;
-}
-
-#program {
-    grid-area: program;
-}
-
-#evenimente {
-    grid-area: evenimente;
-}
-
-#galerie-statica {
-    grid-area: galerie;
-}
-
-#trailere {
-    grid-area: trailere;
-}
-
-#index-intrebari {
-    grid-area: index-intrebari;
-}
-
-#dv-prezentare img {
-    width: 40%;
+#figuri figure img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 6px;
     display: block;
 }
 
-.container-iframe {
+#galerie-statica, #trailere, #download {
+    background-color: var(--culoare-secundara);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    padding: var(--padding-intern);
+    margin: 1.5rem 0;
+}
+
+.intro-oferte {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.intro-oferte div {
+    background-color: var(--culoare-primara);
+    color: var(--culoare-text);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    cursor: default;
+}
+
+.intro-oferte div:hover {
+    background-color: var(--culoare-accent);
+    color: var(--culoare-fundal);
+}
+
+#dv-prezentare-1 {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#dv-prezentare img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100px;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+video {
+    width: 100%;
+    max-width: 640px;
+    min-width: 200px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+#container-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+article figure, #documentare figure {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem 0;
 }
 
-.taburi-iframe {
-    display: flex;
-    flex-direction: row;
-
+article figure img, #documentare figure img {
+    width: auto;
+    max-width: 260px;
+    min-width: 80px;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.taburi-iframe>a {
-    display: inline-block;
-    padding: 10px;
-    background-color: antiquewhite;
-    border: 1px solid var(--culoare-contur);
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    /*margin-right: 10px;*/
-    transition: all 0.33s linear;
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
-.taburi-iframe>a:hover {
-    background-color: var(--culoare-contur);
-    color: white;
+#grid-galerie figure { overflow: hidden; border-radius: 8px; }
+
+#grid-galerie img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s;
 }
 
-#tab-program td,
-#tab-program th {
-    border: 1px solid black;
-    text-align: center;
-    padding: 5px;
-}
+#grid-galerie img:hover { transform: scale(1.04); }
+
+.container-tabel { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
 
 #tab-program {
     border-collapse: collapse;
+    width: 100%;
+    min-width: 380px;
 }
 
-#tab-program tr:nth-child(even) {
-    background-color: lightblue;
+#tab-program caption {
+    caption-side: bottom;
+    padding: 0.5rem;
+    font-style: italic;
+    color: var(--culoare-accent);
+    text-align: center;
 }
 
-#tab-program .roz {
-    background-color: pink;
+#tab-program th, #tab-program td {
+    border: 1px solid var(--culoare-contur);
+    text-align: center;
+    padding: 0.5rem;
 }
 
-@media screen and (max-width:1200px) {
-
-    body {
-        --margine-pagina: 80px
-    }
-
-    #grid-pagina {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "welcome welcome"
-            "despre despre"
-            "misiune noutati"
-            "anunturi categorii"
-            "evenimente evenimente"
-            "fig1 program"
-            "fig2 program"
-            "fig3 program"
-            "index-intrebari index-intrebari"
-            "galerie galerie"
-            "trailere trailere";
-    }
-
+#tab-program thead th {
+    background-color: var(--culoare-primara);
+    color: var(--culoare-text);
 }
 
-@media screen and (max-width:700px) {
+#tab-program tfoot td {
+    background-color: rgba(21,101,192,0.15);
+    font-style: italic;
+    color: var(--culoare-accent);
+}
 
-    body {
-        --margine-pagina: 50px
-    }
+#tab-program tbody td:nth-child(odd)  { background-color: rgba(21,101,192,0.12); }
+#tab-program tbody td:nth-child(even) { background-color: rgba(30,58,95,0.3); }
+#tab-program tbody tr { transition: background-color 0.3s ease; }
+#tab-program tbody tr:hover td { background-color: var(--culoare-hover) !important; }
+#tab-program .roz { background-color: rgba(232,160,32,0.25) !important; color: var(--culoare-accent); font-weight: bold; }
 
-    #grid-pagina {
-        display: block;
-    }
+.container-iframe { display: flex; flex-direction: column; align-items: center; }
+.taburi-iframe { display: flex; flex-direction: row; }
 
+.taburi-iframe > a {
+    display: block;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--culoare-secundara);
+    border: 1px solid var(--culoare-contur);
+    border-bottom: none;
+    color: var(--culoare-text);
+    text-decoration: none;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.taburi-iframe > a:hover { background-color: var(--culoare-primara); color: white; }
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    min-width: 200px;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+}
+
+#link-top {
+    position: fixed;
+    display: block;
+    opacity: 0.5;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--culoare-primara);
+    border-radius: 0.7rem;
+    border-bottom-right-radius: 0;
+    border: 1px solid var(--culoare-accent);
+    box-shadow: 0 0 7px 2px var(--culoare-contur) inset;
+    overflow: visible;
+}
+
+#link-top:hover { opacity: 1; }
+
+#triunghi {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 24px solid var(--culoare-accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
